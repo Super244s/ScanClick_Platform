@@ -1,1 +1,43 @@
+:root {
+  --bg: #0f0f0f;
+  --card: #1a1a1a;
+  --primary: #10a37f;
+  --text: #f5f5f5;
+  --muted: #8e8ea0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 4rem; background: rgba(0,0,0,0.8);
+  position: fixed; width: 100%; top: 0; z-index: 100;
+}
+.logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+nav a { color: var(--text); margin-left: 1.5rem; text-decoration: none; }
+
+.btn-primary {
+  background: var(--primary); color: white; padding: 0.6rem 1.2rem;
+  border-radius: 6px; border: none; cursor: pointer;
+}
+.btn-secondary { background: transparent; border: 1px solid var(--muted); }
+
+.hero {
+  text-align: center; padding: 10rem 2rem 5rem;
+  max-width: 800px; margin: 0 auto;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; color: var(--muted); margin-bottom: 2rem; }
+
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; padding: 2rem 4rem; max-width: 1200px; margin: 0 auto;
+}
+.card {
+  background: var(--card); padding: 2rem; border-radius: 12px; text-align: center;
+  border: 1px solid #2a2a2a;
+}
+.popular { border-color: var(--primary); }
+.price { font-size: 2.2rem; font-weight: 700; margin: 1rem 0; }
 
