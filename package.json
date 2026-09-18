@@ -1,22 +1,18 @@
-
 {
   "name": "scanclick-platform",
-  "version": "4.5.0",
-  "description": "ScanClick AI Platform — Vercel/AWS Ready | OpenAI Style",
+  "version": "5.0.0",
+  "description": "A self-contained local AI-style platform with API keys, usage limits and dashboard.",
   "main": "server.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node --watch server.js",
     "start": "node server.js",
-    "build": "echo 'Build complete'"
+    "test": "node --test",
+    "build": "node -e \"console.log('Build complete')\""
   },
   "dependencies": {
-    "express": "^4.19.2",
     "cors": "^2.8.5",
-    "body-parser": "^1.20.2"
+    "express": "^4.19.2"
   },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "author": "Thanva Phupingbut 244",
+  "engines": { "node": ">=18.0.0" },
   "license": "PROPRIETARY"
 }

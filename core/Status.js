@@ -1,15 +1,5 @@
 class Status {
-  getUptime() {
-    return {
-      system: 'ScanClick_Platform',
-      userId: 'Rufio244',
-      isRunning: true,
-      uptime: process.uptime(),
-      autoResetCount: global.resetCount || 0,
-      lastJob: new Date().toISOString(),
-      mode: 'LEARN_FOREVER',
-      dualId: 'Rufio244 <-> Super244s CONNECTED'
-    };
-  }
+  constructor(users) { this.users = users; }
+  getUptime() { return { system: 'ScanClick_Platform', isRunning: true, uptime: process.uptime(), node: process.version, users: this.users.listUsers().length, time: new Date().toISOString() }; }
 }
 module.exports = Status;
